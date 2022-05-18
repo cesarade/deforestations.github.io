@@ -1,0 +1,51 @@
+body{
+    background-color: rgb(255, 255, 255);
+}
+
+.country {
+    fill: rgb(244, 244, 244);
+    stroke: #999;
+  }
+
+.tooltip {   
+    position: absolute;         
+    text-align: center;         
+    width: 80px;                    
+    height: 28px;                   
+    padding: 2px;               
+    font: 12px sans-serif;      
+    background: lightsteelblue; 
+    border: 0px;        
+    border-radius: 8px;         
+    pointer-events: none;           
+}
+
+.country_circle_consumer {
+    fill: #0000ff;
+    opacity: 0.7;
+}
+
+.country_circle_producer {
+    fill: #dd1bd9;
+    opacity: 0.7;
+}
+
+.country_circle_consumer_selected {
+    fill: #3333ff;
+    stroke: #6464ff;
+    stroke-width: 1px;
+    opacity: 0.7;
+}
+
+.country_circle_producer_selected {
+    fill: #db4ddb;
+    stroke: #d560d8;
+    stroke-width: 1px;
+    opacity: 0.7;
+}
+
+.country_circle {
+    fill: #0000ff;
+    opacity: 0.7;
+}
+

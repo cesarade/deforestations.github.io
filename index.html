@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="map.css" />
+    <link rel="stylesheet" type="text/css" href="range.css" />
+</head>
+<body>
+
+    <div class="wrapper">
+        <aside class="sidebar">
+            <div>
+                <label class="title">
+                    Riesgo de deforestación incorporado en la producción y el consumo de productos básicos agrícolas y forestales
+                </label>
+            </div>
+            <div style="color: black; margin-top: 10px; font-size: 0.8em;">
+                <label>
+                    Esta visualización muestra la estimación de las hectáreas ocupadas para la producción y consumo de productos agrícolas y forestales. El color Rosa representan las áreas tomadas para la producción de productos agrícolas y forestales. El color azul hace referencia a la proporción del consumo de estos productos básicos en determinados países entre los años 2015 hasta el 2018.
+                </label>
+            </div>
+            <div>
+                <div style="display: flex; margin-top: 50px;">
+                    <div class="dot" style="background-color: #dd1bd9;"></div>
+                    <label style="color: black; font-size: 0.7em; margin-top: 3px;margin-left: 4px">Hectáreas de los países productores</label>
+                </div>
+                <div style="display: flex;margin-top: 10px;">
+                    <div class="dot" style="background-color: #3333ff;"></div>
+                    <label style="color: black; font-size: 0.7em; margin-top: 0px;margin-left: 4px">Proporción de las hectáreas de los países consumidores</label>
+                </div>
+                
+            </div>
+            <div style="margin-top: 50px;">
+                <label style="color: black; font-size: 0.7em;">
+                    Fuente: <a href="https://zenodo.org/record/5886600#.YoUZFujMJPZ">Pendrill et al. (2020)</a>
+                </label>
+            </div>
+            
+        </aside>
+        <article class="content">
+            <div id="chart">
+                <div id="tooltip" class="tooltip" />
+            </div>
+        </article>
+        <footer class="footer">
+            <div>
+                <span id="rangeValue">2005</span>
+            </div>
+            <div style="text-align: center;">
+                <input type="range" class="range" value="2005" min="2005" max="2018" oninput="showVal(this.value)" onchange="showVal(this.value)">
+            </div>
+            
+        </footer>
+    </div>
+
+
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://d3js.org/topojson.v1.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

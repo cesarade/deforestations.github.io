@@ -113,7 +113,12 @@ const year = 2005
 document.getElementById('rangeValue').innerHTML = year;
 
 drawMap()
-drawData(year, 'c')
-drawData(year, 'p')
+
+const main = async () => {
+    await drawData(year, 'c')
+    await drawData(year, 'p')
+}
+
 
 const tooltip = d3.select('#tooltip')
+main()
